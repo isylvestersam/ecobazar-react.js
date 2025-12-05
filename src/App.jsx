@@ -1,12 +1,10 @@
-import { useState } from 'react'
 
+import Button from "./ui/Button"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className="bg-blue-300">Hello World</h1>
     </>
   )
 }
