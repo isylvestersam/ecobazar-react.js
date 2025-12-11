@@ -7,7 +7,7 @@ import shoppingBagImg from '../Icons/shopping-bag.svg'
 
 const FeaturesTab = () => {
   return ( <div className="bg-white  w-full grid justify-center gap-8 px-4 py-12
-      md:grid-cols-4 md:gap-4 lg:shadow-soft lg:py-8 lg:w-[85%] lg:mx-auto lg:-translate-y-[50%] lg:px-12">
+      lg:grid-cols-4 md:gap-12 lg:shadow-soft lg:py-8 lg:w-full rounded-xl lg:mx-auto lg:-translate-y-[70%] lg:px-12">
     <div className='flex gap-4 items-center'>
       <img src={deliveryTruckImg} className='max-w-8' />
       <div>

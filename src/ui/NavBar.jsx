@@ -57,7 +57,7 @@ const NavBar = () => {
 
     {/* Mobile Nav */}
     <div className='flex flex-col lg:hidden '>
-    <div className='flex justify-between items-center px-6 py-1 '>
+    <div className='flex justify-between items-center mb-3 px-6 py-1 '>
       <img src={logo} className="w-36 " />
       <button onClick={handleOpenDropDown} className='z-50' >
         {

@@ -7,6 +7,8 @@ import StoreLocation from "./ui/StoreLocation"
 import FeaturesTab from "./Components/FeaturesTab"
 import NavBar from "./ui/NavBar"
 import DesktopNavigator from "./ui/DesktopNavigator"
+import Homepage from "./Pages/Homepage"
+import ProductCard from "./ui/ProductCard"
 
 function App() {
 
@@ -25,17 +27,8 @@ function App() {
           <Login />
         </div> */}
 
-        
-
-        <div className="container flex flex-col mx-auto pt-3 px-8">
-          <NavBar />
-        </div>
-
-        <section className="bg-[#333333] hidden lg:flex mt-4">
-          <div className="container flex flex-col mx-auto py-4  px-8">
-            <DesktopNavigator />
-          </div>
-        </section>
+        <Homepage />
+        <ProductCard />
         
       </section> 
       
