@@ -5,7 +5,7 @@ import shoppingBag from '../Icons/add-to-cart.svg'
 import halfStarIcon from '../Icons/half-star.svg';
 
 const ProductCard = ( {image, title, price, rating} ) => {
-  return ( <div className='relative group flex flex-col justify-between border border-gray-300 px-4 pb-4 h-82 rounded-xl max-w-58  hover:border-primary hover:shadow-soft animate'> 
+  return ( <div className='relative group flex flex-col justify-between border border-gray-300 px-4 pb-4 h-82 rounded-xl w-58  hover:border-primary hover:shadow-soft animate lg:h-72'> 
     <img src={image} alt="" />
     <div className=''>
       <div className='flex justify-between items-center'>
