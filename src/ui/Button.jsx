@@ -1,6 +1,6 @@
 
 
-const Button = ({ buttonType, buttonSize, children } ) => {
+const Button = ({ buttonType, buttonSize, classname, children } ) => {
   let type = '';
   let size = '';
 
@@ -30,7 +30,7 @@ const Button = ({ buttonType, buttonSize, children } ) => {
 
   return ( 
     <button
-      className={ ` ${type} ${size} w-full rounded-full transition-all duration-200 ease-in-out hover:cursor-pointer font-medium` }
+      className={ ` ${type} ${size} ${classname} rounded-full transition-all duration-200 ease-in-out hover:cursor-pointer font-medium` }
     >
       { children }
     </button>

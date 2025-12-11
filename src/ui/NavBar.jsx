@@ -1,6 +1,11 @@
+import logo from '../Icons/logo.svg';
+import searchIcon from '../Icons/search-icon.svg';
+import heartIcon from '../Icons/Heart.svg';
+import DividerIcon from '../Icons/Devider.svg';
+import HeartIcon from '../Icons/Heart.svg';
+import CartImg from '../Icons/Cart.svg'
 import { useState } from 'react';
 import hamburger from '../Icons/menu.svg'
-import logo from '../Images/ecobazar-logo.png'
 import { createPortal } from 'react-dom';
 import navImage from '../Images/nav-image.png'
 import closeImg from '../Icons/x.png'
@@ -14,15 +19,45 @@ import twitterImg from '../Icons/twitter.svg'
 import pinterestImg from '../Icons/pinterest.svg'
 import instagramImg from '../Icons/instagram.svg'
 
-const MobileNavbar = () => {
+
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   function handleOpenDropDown() {
     setIsOpen(prev => !prev)
   }
 
-  return ( <div className='flex flex-col h-screen pb-6'>
-    <div className='flex justify-between items-center px-6 py-7 mb-5'>
+  return ( <div>
+    <div className='justify-between hidden lg:flex'>
+      <div>
+        <img src={logo} alt="" />
+      </div>
+      <div className='flex  rounded-lg w-fit'>
+        <div className='flex pl-3 border rounded-tl-lg rounded-bl-lg border-gray-300 border-r-0'>
+          <img src={searchIcon} className='max-w-4' />
+          <input type="text" className='py-2 px-3 w-72 focus:outline-none ' placeholder='Search...'  />
+        </div>
+        <button className='bg-primary border-primary px-5 py-2 text-white rounded-tr-lg rounded-br-lg hover:bg-hard-primary animate'>
+          Seach
+        </button>
+      </div>
+      <div className='flex gap-4'>
+        <img src={heartIcon} alt="" />
+        <img src={DividerIcon} alt="" />
+        <div className='flex gap-2'>
+          <img src={CartImg} alt="" />
+          <span>
+            <p className='text-gray-500'>Shopping Cart:</p>
+            <p className='font-semibold'>$57.00</p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    {/* Mobile Nav */}
+    <div className='flex flex-col lg:hidden '>
+    <div className='flex justify-between items-center px-6 py-1 '>
       <img src={logo} className="w-36 " />
       <button onClick={handleOpenDropDown} className='z-50' >
         {
@@ -37,7 +72,7 @@ const MobileNavbar = () => {
       {/* Drop Down */}
       {
         isOpen ? (
-            <div className='fixed flex flex-col pl-8 pb-12 pt-24 h-full justify-between inset-0 z-20 bg-white'>
+            <div className='fixed flex flex-col pl-8 pb-12 pt-30 h-full justify-between inset-0 z-20 bg-white opacity-97'>
               <div className='z-50 w-full   flex flex-col gap-5 '>
                   <span className='flex gap-3'>
                     <img src={homeIcon} className='w-7' alt="" />
@@ -91,7 +126,9 @@ const MobileNavbar = () => {
     </div>
 
     
+  </div>
+
   </div> );
 }
  
-export default MobileNavbar;
+export default NavBar;
