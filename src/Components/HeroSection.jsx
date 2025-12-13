@@ -1,7 +1,5 @@
 import Button from "../ui/Button";
-import arrowNext from '../Icons/arrow-next.svg'
-import desktopVeggieImg from '../Images/desktop-herosection-image.png'
-import mobileVeggieImg from '../Images/mobile-herosection-image.png'
+
 
 const HeroSection = () => {
   return ( <div className="bg-[#EDF2EE] w-full flex flex-col justify-between pt-12 lg:flex-row items-center lg:py-32" >
@@ -15,13 +13,13 @@ const HeroSection = () => {
         <h3 className="text-3xl">Sale up to <span className="font-semibold text-warning">30% OFF</span></h3>
         <Button classname='flex gap-3 mx-auto lg:mx-0 lg:mr-auto lg:py-3 lg:px-7'>
           Shop now
-          <img src={arrowNext} alt="" />
+          <img src="/Icons/arrow-next.svg" alt="" />
         </Button>
       </div>
     </div>
     <div className="flex flex-col justify-center items-center w-[40%]">
-      <img src={mobileVeggieImg} className="md:w-[50%] lg:hidden min-w-102" />
-      <img src={desktopVeggieImg} className="hidden lg:flex min-w-102" />
+      <img src="/Images/mobile-herosection-image.png" className="md:w-[50%] lg:hidden min-w-102" />
+      <img src="/Images/desktop-herosection-image.png" className="hidden lg:flex min-w-102" />
     </div>
   </div> );
 }

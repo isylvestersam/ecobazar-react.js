@@ -5,6 +5,9 @@ import NavBar from "../ui/NavBar";
 import FeaturedProducts from "../Components/FeaturedProducts";
 import CompactCard from "../ui/CompactCard";
 import Showcase from "../ui/Showcase";
+import TopCategoryCard from "../ui/TopCategoryCard";
+import TopCategory from "../Components/TopCategory";
+import TestimonialCard from "../ui/TestimonialCard";
 
 
 const Homepage = () => {
@@ -31,6 +34,8 @@ const Homepage = () => {
     <div className="container flex flex-col mx-auto py-4 px-4  lg:px-24 ">
       <FeaturedProducts />
       <Showcase />
+      <TopCategory />
+      <TestimonialCard />
     </div>
   </div> );
 }

@@ -1,11 +1,11 @@
-import appleImage from '../Images/apple.png';
-import starIcon from '../Icons/star-icon.svg';
-import unstarIcon from '../Icons/unstar.svg'
-import halfStarIcon from '../Icons/half-star.svg';
+import appleImage from '/Images/apple.png';
+import starIcon from '/Icons/star-icon.svg';
+import unstarIcon from '/Icons/unstar.svg'
+import halfStarIcon from '/Icons/half-star.svg';
 
 
 const CompactCard = ({ title, price, rating, image }) => {
-  return ( <div className='flex items-center w-86 rounded-lg border border-gray-300 overflow-hidden gap-3 p-3 hover:shadow-soft hover:border-primary hover:scale-[0.99] transition-all animate group'>
+  return ( <div className='flex items-center w-86 h-30 rounded-lg border border-gray-300 overflow-hidden gap-3 p-3 hover:shadow-soft hover:border-primary hover:scale-[0.99] transition-all animate group'>
     <img src={image} className='w-28' />
     <div className='flex flex-col gap-1  animate'>
       <h3 className='text-green-700'>{title}</h3>

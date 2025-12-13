@@ -17,7 +17,7 @@
   font-family: 'Poppins';
 }
 button {
-  @apply hover:cursor-pointer
+  @apply hover:cursor-pointer hover:scale-[0.98] transition-all duration-200 ease-in-out
 }
 .animate {
   @apply transition-all duration-200 ease-in-out

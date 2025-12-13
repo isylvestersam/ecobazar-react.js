@@ -1,6 +1,5 @@
-import chevronDown from '../Icons/chevron-down.svg'
 import { useState } from 'react';
-import phoneImg from '../Icons/phone.svg'
+
 
 const DesktopNavigator = () => {
   const [currPage, setPage] = useState('Home');

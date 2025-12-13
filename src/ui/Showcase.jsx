@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { hotDeals, bestSellers, topRated } from "../store/data";
 import CompactCard from "./CompactCard";
+import BannarImage from "/Images/Bannar.png";
 
 
 const Showcase = () => {
@@ -20,7 +21,7 @@ const Showcase = () => {
   }
   
   
-
+  // Mobile View
   return ( <div className="mt-16">
     <div className="flex flex-col justify-between items-center mb-3 lg:hidden">
       <div className="flex items-center justify-between w-full mb-4 px-4">
@@ -31,7 +32,7 @@ const Showcase = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>
           </button>
-          <h3 className="text-2xl"> {categories[currDeal]} </h3>
+          <h3 className="text-2xl "> {categories[currDeal]} </h3>
           <button 
             onClick={handleNext}
             className="p-2 border border-gray-300 rounded-full hover:shadow-soft hover:bg-primary-dark transition-all hover:bg-primary hover:text-white animate">
@@ -55,12 +56,14 @@ const Showcase = () => {
               }
             </div>
     </div>
-    <div className="hidden lg:flex flex-col gap-6  justify-center">
-      <div className="flex gap-5 flex-wrap justify-center">
+
+    {/* Desktop View */}
+    <div className="hidden lg:flex flex-col gap-6 justify-center mb-10">
+      <div className="flex gap-5 flex-wrap justify-center items-stretch">
         {
           dealsData.map((dealCategory, index) => (
-            <div key={index} className="lg:block">
-              <h3 className="text-xl mb-4 text-center"> {categories[index]} </h3>
+            <div key={index} className="flex flex-col h-full">
+              <h3 className="text-xl mb-4 text-left"> {categories[index]} </h3>
               <div className="flex flex-col gap-5 flex-wrap justify-center">
                 {
                   dealCategory.map((item) => (
@@ -77,7 +80,8 @@ const Showcase = () => {
             </div>
           ))
         }
-      </div>
+        </div>
+      
     </div>
   </div> );
 }

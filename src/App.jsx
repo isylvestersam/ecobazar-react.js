@@ -1,15 +1,6 @@
-import { Features } from "tailwindcss"
-import HeroSection from "./Components/HeroSection"
-import Login from "./Pages/Login"
-import BreadCrumbs from "./ui/BreadCrumbs"
-import Button from "./ui/Button"
 import StoreLocation from "./ui/StoreLocation"
 import FeaturesTab from "./Components/FeaturesTab"
-import NavBar from "./ui/NavBar"
-import DesktopNavigator from "./ui/DesktopNavigator"
 import Homepage from "./Pages/Homepage"
-import ProductCard from "./ui/ProductCard"
-import MobileFeaturesSlider from "./ui/FeaturesSlider"
 
 function App() {
 
